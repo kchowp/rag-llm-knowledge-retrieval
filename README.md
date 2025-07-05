@@ -133,6 +133,7 @@ Developing this RAG system presented several interesting challenges:
 
 ## 🔮 Future Work & Improvements
 
+* **Further RAG Optimization:**  Continuous iteration and experimentation with both the RAG system and the evaluation framework are critical for further optimization.
 * **Hybrid Retrieval:** Explore combining semantic search with keyword-based retrieval for enhanced performance on diverse query types.
 * **Fine-tuning Embeddings/LLM:** Experiment with fine-tuning smaller embedding models or LLMs on domain-specific data for even greater accuracy.
 * **User Feedback Loop:** Implement a mechanism for user feedback to continually improve the RAG system's relevance and accuracy over time.
