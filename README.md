@@ -1,7 +1,7 @@
 # Tailored Knowledge Retrieval Using RAG and LLMs
 A comprehensive study on developing and evaluating a Retrieval-Augmented Generation (RAG) system for domain-specific Q&A.
 
-**Note on Code Availability**: Due to academic policies and to safeguard the integrity of this project, the underlying code for this project cannot be publicly shared in this repository. This repository serves as a detailed documentation and demonstration of the project's methodology, results, and insights. A comprehensive paper detailing the project is available for review.
+**Note on Code Availability**: Due to academic policies and to safeguard the integrity of this project, the underlying code for this project cannot be publicly shared in this repository. This repository serves as a detailed documentation and demonstration of the project's methodology, results, and insights. A comprehensive [**paper**](Final_Chow_Kevin_RAG_Findings_Results_Report.pdf) detailing the project is available for review.
 
 ---
 
@@ -85,12 +85,31 @@ The systematic approach and experimentation yielded several key insights into op
 * **Evaluation Metrics Refinement:** While effective, the current evaluation metrics are not definitive. Further re-examination may provide a clearer picture of model performance and better guide future improvements.
 
 ### Visualization & Example Answer
-Here are some visualizations highlighting our findings:
+Here are some visualizations highlighting the results:
 
-![Evaluation Metrics Comparison](results/Baseline vs Tuned Rag Systems - Performance Comparison (Full Validation Set).png)
-*Comparison of baseline and tuned RAG system performance*
+![RAG System Comparison](rag_baseline_tuned_comparison.png)
 
-** Insert Example Question/Answer Triplet ** 
+### Example Question & Answers
+
+**Question:** "What defines a large language model in the context of natural language processing tasks?"
+
+**Engineering Research Answer:**
+A large language model (LLM) refers to a machine learning model specifically designed for natural language processing tasks, particularly language generation. These models possess a substantial number of parameters, which enables them to capture intricate patterns and nuances within language data. They are typically trained using self-supervised learning methods on extensive amounts of textual data. This scale allows them to generate more accurate and contextually relevant responses during various NLP applications. However, it's important to note that there isn't a universally agreed-upon definition regarding the exact size or parameter count required to classify a model as "large." Instead, this term generally signifies advanced capabilities and increased computational demands compared to smaller language models.
+
+**Marketing Answer:**
+In the context of natural language processing tasks, a large language model (LLM) refers to a machine learning model specifically designed for language processing tasks like language generation. It has a substantial number of parameters and undergoes learning using an extensive dataset. The size of these models requires significant computational resources for their development and training.
+
+### Final Model Specifications
+
+* **Embedding Model:** `multi-qa-mpnet-base-cos-v1`
+* **Chunk Size:** 256
+* **Overlap:** 0
+* **Search Type:** Similarity (Cosine)
+* **Contexts Retrieved and Passed to Re-ranker:** 6
+* **Re-ranker:** Cross-embedding Re-ranker
+* **Re-ranker Contexts Passed to Prompt:** 5
+* **Prompt Parts:** Role, Audience, Request, Context, Question
+* **LLM:** Mistral 7-B
 
 ---
 
@@ -123,13 +142,16 @@ Developing this RAG system presented several interesting challenges:
 
 ## 📄 Full Technical Paper
 
-For a more in-depth discussion of the project, including detailed methodology, experimental setup, and results, please refer to the [**Full Project Paper (PDF)**](Project_Paper_Tailored_RAG_LLMs.pdf) located in this repository.
+For a more in-depth discussion of the project, including detailed methodology, experimental setup, and results, please refer to the [**Full Project Paper (PDF)**](Final_Chow_Kevin_RAG_Findings_Results_Report.pdf) located in this repository.
 
 ---
 
 ## 📧 Contact
 
 Kevin Chow
+
+Email: kchow2020@berkeley.edu
+
 [LinkedIn Profile](https://www.linkedin.com/in/k-chow/)
 
 ---
